@@ -1,0 +1,26 @@
+def search(sk):
+    flag=0
+    for i in range(len(l)):
+        if(l[i]==sk):
+            flag=1
+            return i
+    if(flag==0):
+            return -1
+def before(pos,l,ele):
+    n=len(l)+1
+    l.append(None)
+    for i in range(n-2,pos-1,-1):
+        l[i+1]=l[i]
+    l[pos]=ele
+l=[10,20,30,40,50]
+val=int(input("Please enter value before yoou want to insert ele"))
+pos=search(val)
+if(pos==-1):
+    print("please enter the valid data")
+    print("data not found")
+else:
+    ele=int(input("Please enter ele to be inserted"))
+    before(pos+1,l,ele)
+    print("The data after insertion")
+    print(l)
+
