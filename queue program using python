@@ -1,0 +1,52 @@
+max=10
+a=[None]*max
+f=0
+r=-1
+def isEmpty():
+    global f,r
+    if(f>r):
+        return 1
+    else:
+        return 0
+def isFull():
+    global max
+    if r==max-1:
+        return 1
+    else:
+        return 0
+def enQue(ele):
+    global r
+    r+=1
+    a[r]=ele
+def deQue():
+    global f
+    print("Deleted ele is: ",a[f])
+    a[f]=None
+    f+=1
+def display():
+    global f,r
+    for i in range(f,r+1):
+        print(a[i])
+while True:
+    print(" 1.Insert\n 2.Delete\n 3.Display\n 4.Exit\n")
+    ch=int(input("Enter the coice"))
+    if(ch==1):
+        if isFull()==1:
+            print("Sorry. Can not insert, Because Que is full")
+        else:
+            ele=input("Enter ele :\n")
+            enQue(ele)
+    elif(ch==2):
+        if isEmpty()==1:
+            print("Que empty, So can not delete")
+        else:
+            deQue()
+    elif(ch==3):
+        if isEmpty()==1:
+            print("Que empty, So can not display")
+        else:
+            display()
+    elif(ch==4):
+            break
+    else:
+            print("Sorry, Invalid choice")
