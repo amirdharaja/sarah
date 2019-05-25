@@ -1,8 +1,8 @@
-def rev(s,n=0):
+def reverse(s,n=0):
     if(n==len(s)-1):
         print(s[n],end='')
     else:
-        rev(s,n+1)
+        reverse(s,n+1)
         print(s[n],end="")
 s=input()
-rev(s)
+reverse(s)
