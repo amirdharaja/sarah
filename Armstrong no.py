@@ -1,5 +1,5 @@
 # find the armstrong number
-num = int(input("Enter the number"))
+num = int(input())
 sum = 0
 temp = num
 while temp > 0:
