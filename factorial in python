@@ -1,3 +1,6 @@
+#copyright to Amirdharajan
+
+
 def fact(n):
     if(n>1):
         res=n*fact(n-1)
