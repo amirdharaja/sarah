@@ -9,11 +9,11 @@ def palindrome(n):
         n=n//10
     print(rev,n1)
     if n1==rev:
-        print("The given number is palindrome")
+        print("yes")
     else:
-        print("The given number is not palindrome")
+        print("no")
      
-n=int(input("Enter any number"))
+n=int(input(""))
 palindrome(n)
 
   
