@@ -5,6 +5,4 @@ length=len(l)
 for i in range(length):
     if i%2==0 and l[i]%2!=0 or i%2!=0 and l[i]%2==0:
         l1.append(l[i])
-for i in l1:
-    print(i,end=" ")
-
+print(l1)
