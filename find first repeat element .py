@@ -10,4 +10,4 @@ try:
 
     print(l2[0])
 except:
-    print("")
+    print("unique")
