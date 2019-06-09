@@ -1,6 +1,3 @@
-#by amirdharajan from KPR
-
-
 s=input()
 l=list(s.split())
 for i in l:
