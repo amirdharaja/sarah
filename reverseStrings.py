@@ -1,4 +1,4 @@
-#by amirdharajan
+#by amirdharajan from KPR
 
 
 s=input()# give string input
