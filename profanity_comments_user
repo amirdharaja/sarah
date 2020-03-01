@@ -1,0 +1,28 @@
+import csv
+
+
+class Profanity():
+
+    def check_profanity(self):
+        with open("profanity.txt") as words:
+            profanity_words = (words.read().lower()).split(', ')
+        with open("sample_data.csv") as sample_data:
+            comments = csv.reader(sample_data)
+            count = 0
+            profanity_comments_user = []
+            for comment in comments:
+                data = comment[1].lower()
+                profanity_comments = {'id': None, 'total_profanity_words': 0, 'comment': None}
+                for profanity_word in profanity_words:
+                    if profanity_word in data:
+                        count += 1
+                        profanity_comments['total_profanity_words'] += 1
+                        profanity_comments.update({'id': comment[0],  'comment': comment[1]})
+                if profanity_comments['total_profanity_words'] != 0:
+                    profanity_comments_user.append(profanity_comments)
+
+            for d in profanity_comments_user:
+                print(d)
+
+run = Profanity()
+run.check_profanity()
